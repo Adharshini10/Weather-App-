@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="weather-card">
+
+            <h1>🌤 Weather App</h1>
+            <p class="subtitle">Get live weather updates instantly</p>
+
+            <div class="search-box">
+                <input type="text" id="city" placeholder="Enter city name">
+                <button onclick="getWeather()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <div id="loading" class="loading">
+                Loading weather...
+            </div>
+
+            <div id="weatherResult" class="weather-info">
+                <div class="city-name">Search a city</div>
+
+                <div class="weather-icon">
+                    <i class="fas fa-cloud-sun"></i>
+                </div>
+
+                <div class="temperature">--°C</div>
+
+                <div class="condition">Weather Condition</div>
+
+                <div class="details">
+
+                    <div class="detail-box">
+                        <i class="fas fa-droplet"></i>
+                        <span id="humidity">--%</span>
+                        <small>Humidity</small>
+                    </div>
+
+                    <div class="detail-box">
+                        <i class="fas fa-temperature-high"></i>
+                        <span id="feelsLike">--°C</span>
+                        <small>Feels Like</small>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

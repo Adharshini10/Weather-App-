@@ -1,0 +1,153 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+}
+
+.container{
+    width:100%;
+    max-width:450px;
+    padding:20px;
+}
+
+.weather-card{
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.15);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    border-radius:25px;
+
+    padding:30px;
+    text-align:center;
+
+    color:white;
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.2);
+}
+
+.weather-card h1{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    opacity:0.9;
+    margin-bottom:25px;
+}
+
+.search-box{
+    display:flex;
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.search-box input{
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    font-size:1rem;
+}
+
+.search-box button{
+    width:55px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+
+    background:white;
+    color:#667eea;
+
+    font-size:1rem;
+
+    transition:0.3s;
+}
+
+.search-box button:hover{
+    transform:scale(1.05);
+}
+
+.weather-icon{
+    font-size:4rem;
+    margin:15px 0;
+}
+
+.city-name{
+    font-size:1.8rem;
+    font-weight:600;
+}
+
+.temperature{
+    font-size:3rem;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.condition{
+    font-size:1.2rem;
+    margin-bottom:20px;
+}
+
+.details{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+.detail-box{
+    flex:1;
+
+    background:rgba(255,255,255,0.15);
+
+    padding:15px;
+    border-radius:15px;
+
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.detail-box i{
+    font-size:1.4rem;
+}
+
+.detail-box span{
+    font-size:1.2rem;
+    font-weight:bold;
+}
+
+.loading{
+    display:none;
+    margin-top:15px;
+    color:white;
+}
+
+@media(max-width:500px){
+
+    .details{
+        flex-direction:column;
+    }
+
+    .temperature{
+        font-size:2.5rem;
+    }
+
+}
